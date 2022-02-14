@@ -15,8 +15,8 @@ It's built with Sinatra and it uses a PostgreSQL database to store data.
 
 ## User story one
 
-As a user
-So that I can see a bookmark
+As a user\
+So that I can see a bookmark\
 I would like the app to show a list of bookmarks when I ask it to.
 
 ![](./01-user-story-domain-model.png)
