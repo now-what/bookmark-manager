@@ -1,7 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
+require './lib/bookmark.rb'
 
-class Bookmark < Sinatra::Base
+class Bookmarkmanager < Sinatra::Base
   configure :development do
     # set :public_folder, File.expand_path('../public', __FILE__) >>> used for style.css
     register Sinatra::Reloader
@@ -12,6 +13,7 @@ class Bookmark < Sinatra::Base
   end
 
   get '/bookmark' do 
+    @list = Bookmark.all
     erb :bookmark_list
   end 
 
