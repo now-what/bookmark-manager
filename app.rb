@@ -8,14 +8,10 @@ class Bookmarkmanager < Sinatra::Base
     register Sinatra::Reloader
   end
 
-  get '/' do
-    erb :index
-  end
-
-  get '/bookmark' do 
+  get '/bookmarks' do
     @list = Bookmark.all
-    erb :bookmark_list
-  end 
+    erb :'bookmarks/index'
+  end
 
   run! if app_file == $0
 end

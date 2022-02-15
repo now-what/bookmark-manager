@@ -5,6 +5,7 @@ source "https://rubygems.org"
 gem 'sinatra'
 gem 'sinatra-reloader'
 gem 'webrick'
+gem 'pg'
 
 group :test do
   gem 'rspec'
