@@ -7,8 +7,8 @@ feature 'view the list of all bookmarks' do
         connection.exec("INSERT INTO bookmarks VALUES(2, 'http://www.destroyallsoftware.com', 'Destroy' );")
         connection.exec("INSERT INTO bookmarks VALUES(3, 'http://www.google.com', 'Google');")
 
-        visit "/bookmarks"
-        expect(page).to have_content("http://www.makersacademy.com")
-        expect(page).to have_content("http://www.google.com")
+        visit "/bookmarks/"
+        expect(page).to have_content("Makers")
+        expect(page).to have_content("Google")
     end
 end
